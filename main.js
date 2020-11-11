@@ -5,22 +5,30 @@ const buttons = document.querySelectorAll('button');
 const resultDiv = document.querySelector('.results');
 const container = document.querySelector('.container');
 
-
+// Clear data in resultDiv before select another button
 const refreshResultPage = () => {
-    resultDiv.remove();
+    while (resultDiv.hasChildNodes()) {
+        resultDiv.removeChild(resultDiv.lastChild);
+    }
 }
 
-const addNewResultsDiv = () => {
-    const div = document.createElement('div');
-    div.classList.add('results');
-    container.appendChild(div);
-}
+// Country list
+const getCountryList = randomPersonData.map((country) => {
+    return country.region;
+});
+const countriesSet = new Set(getCountryList);
+let uniqueCountriesArray = Array.from(countriesSet)
 
 // On each button click, delete result div and add a new empty one
 buttons.forEach(button => {
     button.addEventListener('click', (event) => {
-        console.log('test');
         refreshResultPage();
-        addNewResultsDiv();
+        if (event.target.innerHTML === 'Landenlijst') {
+            uniqueCountriesArray.forEach(item => {
+                const li = document.createElement('li');
+                resultDiv.appendChild(li);
+                li.innerHTML = item;
+            });
+        }
     });
 });
