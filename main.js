@@ -1,6 +1,10 @@
 const getData = (endpoint) => {
     const API_URL = `https://icanhazdadjoke.com/j/${endpoint}`;
-    fetch(API_URL).then(
+    const options = {
+        method: "GET",
+        headers: { "Accept": "application/json" } // fixes “No Access-Control-Allow-Origin header”
+    };
+    fetch(API_URL, options).then(
         function(response) {
             const json = response.json();
             json.then(function(data) {
