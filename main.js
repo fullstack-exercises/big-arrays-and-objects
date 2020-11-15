@@ -1,19 +1,18 @@
 const getData = (endpoint) => {
-    const API_URL = `https://icanhazdadjoke.com/j/${endpoint}`;
+    const API_URL = `https://icanhazdadjoke.com${endpoint}`;
     const options = {
         method: "GET",
         headers: { "Accept": "application/json" } // fixes “No Access-Control-Allow-Origin header”
     };
-    fetch(API_URL, options).then(
-        function(response) {
-            const json = response.json();
-            json.then(function(data) {
-                console.log(data);
-            });
-        }
-    );
+    fetch(API_URL, options)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => {
+            console.log(error);
+        });
 }
-getData('R7UfaahVfFd');
+getData('/j/R7UfaahVfFd');
+
 
 // Requirements:
 
