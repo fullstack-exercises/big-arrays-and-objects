@@ -25,6 +25,7 @@ h1 {
     font-weight: 200;
     text-align: center;
     font-size: 24px;
+    border-radius: 10px;
     &::after {
         content: '';
         width: 40px;
@@ -34,5 +35,28 @@ h1 {
         position: absolute;
         bottom: -23px;
         left: 47%;
+    }
+    &__button {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: $space-xl;
+    }
+}
+
+.button {
+    border-radius: 10px;
+    padding: $space;
+    text-transform: uppercase;
+    border: 1px solid $color-green;
+    background-color: $color-green;
+    border: 0;
+    color: $color-white;
+    outline: 0;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        border: 1px solid $color-green;
+        color: $color-green;
+        background-color: $color-white;
     }
 }

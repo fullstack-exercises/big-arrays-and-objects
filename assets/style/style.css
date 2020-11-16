@@ -25,6 +25,7 @@ h1 {
   font-weight: 200;
   text-align: center;
   font-size: 24px;
+  border-radius: 10px;
 }
 
 .joke::after {
@@ -36,6 +37,37 @@ h1 {
   position: absolute;
   bottom: -23px;
   left: 47%;
+}
+
+.joke__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 52.5px;
+}
+
+.button {
+  border-radius: 10px;
+  padding: 15px;
+  text-transform: uppercase;
+  border: 1px solid #2a9d8f;
+  background-color: #2a9d8f;
+  border: 0;
+  color: #ffffff;
+  outline: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  border: 1px solid #2a9d8f;
+  color: #2a9d8f;
+  background-color: #ffffff;
 }
 
 @media screen and (min-width: 1024px) {
