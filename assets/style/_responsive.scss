@@ -1,0 +1,12 @@
+// All styling is mobile first
+// Tablet
+@media screen and (min-width: 480px) {}
+
+// Desktop
+@media screen and (min-width: 1024px) {
+    .joke {
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+    }
+}

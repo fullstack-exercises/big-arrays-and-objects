@@ -1,0 +1,46 @@
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: black;
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.container {
+  padding: 15px;
+}
+
+.joke {
+  min-height: 300px;
+  background-color: #e5e8ec;
+  padding: 30px;
+  position: relative;
+  font-weight: 200;
+}
+
+.joke::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-image: url("../svg/quote-right-solid.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -23px;
+  left: 47%;
+}
+
+@media screen and (min-width: 1024px) {
+  .joke {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */
