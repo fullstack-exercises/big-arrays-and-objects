@@ -1,4 +1,4 @@
-const getData = (endpoint) => {
+const getRandomJoke = (endpoint) => {
     const API_URL = `https://icanhazdadjoke.com${endpoint}`;
     const options = {
         method: "GET",
@@ -11,7 +11,7 @@ const getData = (endpoint) => {
             console.log(error);
         });
 }
-getData('/j/R7UfaahVfFd');
+getRandomJoke('');
 
 
 // Requirements:
