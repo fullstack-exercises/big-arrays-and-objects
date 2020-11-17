@@ -57,7 +57,7 @@ h1 {
   text-transform: uppercase;
   border: 1px solid #2a9d8f;
   background-color: #2a9d8f;
-  border: 0;
+  cursor: pointer;
   color: #ffffff;
   outline: 0;
   -webkit-transition: all 0.3s ease-in-out;
